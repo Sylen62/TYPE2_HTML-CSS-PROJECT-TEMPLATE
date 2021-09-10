@@ -56,31 +56,101 @@
   <!-- Content -->
   <main id="main" class="pt-navbar-height">
     <div class="container container--narrow  container--with-sidebar-left mt-4">
-      <h1 class="mb-3">Main</h1>
+      <h1 class="mb-3">Position</h1>
       <p>
-        asd
+        <code>Position</code>, tai HTML elemento pozicionavimas kitų elementų atžvilgiu. Standartinis pozicionavimas
+        vadinamas <code>static</code>.
       </p>
+      <!-- <p class="mt-2">
+        <code>Static</code> pozicionavimas veikia rašymo tvarkos principu: iš kairės į dešinę, o jeigu elementai
+        netelpa
+        į tėvinio elemento plotį, tuomet persikelia į sekančią eilutę. Yra dar keli pozicionavimo tipai, kurie
+        bus
+        aprašyti šios sekcijos potemėse.
+      </p> -->
     </div>
 
-    <section id="git-init" class="navbar-anchor-fix">
+    <section id="position-types" class=" navbar-anchor-fix">
       <div class="container container--narrow  container--with-sidebar-left mt-5">
-        <h2 class="mb-2">Section 1</h2>
+        <h2 class="mb-3"><code class="h4">Pagrindiniai position tipai</code></h2>
+        <ul class="ul">
+          <li><code>static</code></li>
+          <li><code>relative</code></li>
+          <li><code>absolute</code></li>
+          <li><code>fixed</code></li>
+          <li><code>sticky</code></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="position-static" class=" navbar-anchor-fix">
+      <div class="container container--narrow  container--with-sidebar-left mt-5">
+        <h2 class="mb-3"><code class="h4">Static</code></h2>
         <p>
-          asd
+          <code>Static</code> pozicionavimas veikia rašymo tvarkos principu: iš kairės į dešinę, o jeigu elementai
+          netelpa į tėvinio elemento plotį, tuomet persikelia į sekančią eilutę.
         </p>
       </div>
     </section>
 
-    <section id="git-init" class="navbar-anchor-fix">
+    <section id="position-relative" class=" navbar-anchor-fix">
       <div class="container container--narrow  container--with-sidebar-left mt-5">
-        <h2 class="mb-2">Section 3</h2>
+        <h2 class="mb-3"><code class="h4">Relative</code></h2>
         <p>
-          asd
+          <code>Relative</code> - elemento pozicionavimas, pagal standartinę <code>static</code> elemento
+          poziciją. Tam naudojamos CSS savybės:
         </p>
+        <ul class="ul">
+          <li><code>top</code></li>
+          <li><code>right</code></li>
+          <li><code>bottom</code></li>
+          <li><code>left</code></li>
+        </ul>
+        <article>
+          <h3><code class="h5">Position relative pavizdys</code></h3>
+          <div class="square">1</div>
+          <div class="square">2</div>
+          <div class="square">3</div>
+          <div class="square">4</div>
+          <div class="square">5</div>
+          <div class="square">6</div>
+          <div class="square square--relative">7</div>
+          <div class="square">8</div>
+          <div class="square">9</div>
+          <div class="square">10</div>
+          <div class="square">11</div>
+          <div class="square">12</div>
+          <div class="square">13</div>
+          <div class="square">14</div>
+          <div class="square">15</div>
+          <div class="square">16</div>
+          <div class="square">17</div>
+          <div class="square">18</div>
+          <div class="square">19</div>
+          <div class="square">20</div>
+          <div class="square">21</div>
+          <div class="square">22</div>
+          <div class="square">23</div>
+          <div class="square">24</div>
+          <div class="square">25</div>
+          <div class="square">26</div>
+          <div class="square">27</div>
+          <div class="square">28</div>
+      </div>
+      </article>
       </div>
     </section>
+
 
   </main>
+
+  <!-- 
+    static
+    * * * relative
+    * * * absolute
+    * * * fixed
+    * * * sticky
+   -->
 
   <!-- Footer -->
   <footer class="footer bg-dark text-center text-light py-3 mt-5">
