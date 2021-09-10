@@ -50,6 +50,7 @@
         <li><a class="sidebar__link" href="#flex-wrap">Flex wrap</a></li>
         <li><a class="sidebar__link" href="#flex-flow">Flex flow</a></li>
         <li><a class="sidebar__link" href="#justify-content">Justify content</a></li>
+        <li><a class="sidebar__link" href="#align-items">Align items</a></li>
         <li><a class="sidebar__link" href="#align-content">Align content</a></li>
       </ul>
     </nav>
@@ -60,7 +61,7 @@
     <div class="container container--narrow  container--with-sidebar-left mt-4">
       <h1 class="mb-3">Flex</h1>
       <p>
-        Flex, <code>Display: flex</code>, yra konteinerių lygiavimo elementas.
+        Flex, <code>display: flex</code>, yra konteinerių lygiavimo elementas.
       </p>
       <a href="https://flexboxfroggy.com/" target="blank">interaktyvus flexbox žaidimas</a>
     </div>
@@ -107,64 +108,58 @@
       <div class="container container--narrow  container--with-sidebar-left mt-5">
         <h2 class="mb-2"><code class="h4">justify-content</code></h2>
         <p>
-          This defines the alignment along the main axis. It helps distribute extra free space leftover when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. It also exerts some control over the alignment of items when they overflow the line.</p>
+          Apibrėžia lygiavimą išilgai pagal pagrindinę ašį. Tai padeda paskirstyti papildomos laisvos vietos likučius, kai visi lankstūs elementai ašyje yra nelankstūs arba yra lankstūs ir pasiekę maksimalų dydį. Tai taip pat šiek tiek kontroliuoja elementų lygiavimą, kai jie perpildo eilutę.
+        </p>
         <ul class="ul">
-          <li><code>flex-start (default)</code>: items are packed toward the start of the flex-direction.</li>
-          <li><code>flex-end</code>: items are packed toward the end of the flex-direction.</li>
-          <li><code>start</code>: items are packed toward the start of the writing-mode direction.</li>
-          <li><code>end</code>: items are packed toward the end of the writing-mode direction.</li>
-          <li><code>left</code>: items are packed toward left edge of the container, unless that doesn’t make sense with the flex-direction, then it behaves like start.</li>
-          <li><code>right</code>: items are packed toward right edge of the container, unless that doesn’t make sense with the flex-direction, then it behaves like end.</li>
-          <li><code>center</code>: items are centered along the line</li>
-          <li><code>space-between</code>: items are evenly distributed in the line; first item is on the start line, last item on the end line</li>
-          <li><code>space-around</code>: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren’t equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has its own spacing that applies.</li>
-          <li><code>space-evenly</code>: items are distributed so that the spacing between any two items (and the space to the edges) is equal.</li>
+          <li><code>flex-start (default)</code>: objektai yra surykiuoti ties <code>flex-direction</code> pradžia.</li>
+          <li><code>flex-end</code>: objektai yra surykiuoti ties <code>flex-direction</code> pabaiga.</li>
+          <li><code>start</code>: objektai yra surykiuoti ties rašymo pradžia.</li>
+          <li><code>end</code>: objektai yra surykiuoti ties rašymo pabaiga.</li>
+          <li><code>left</code>: objektai surikiuoti link kairiojo konteinerio krašto, nebent tai neturi prasmės <code>flex-direction</code> reikšmei ir tada jis elgiasi kaip <code>start</code>.</li>
+          <li><code>right</code>: objektai surikiuoti link dešiniojo konteinerio krašto, nebent tai neturi prasmės <code>flex-direction</code> reikšmei ir tada jis elgiasi kaip <code>end</code>.</li>
+          <li><code>center</code>: objektai išcentruojami.</li>
+          <li><code>space-between</code>: objektai yra tolygiai paskirstyti eilutėje; pirmasis objektas yra pradžios eilutėje, paskutinis objektas pabaigos eilutėje.</li>
+          <li><code>space-around</code>: objektai tolygiai pasiskirsto eilutėje, aplink juos yra vienoda erdvė. Atminkite, kad vizualiai erdvės nėra lygios, nes visi objektai turi vienodą erdvę iš abiejų pusių. Pirmasis objektas turi vieną erdvės vienetą prieš konteinerio krašte, bet du erdvės vienetus tarp kito objekta4o, nes kitas objektas turi savo atskirą tarpą.</li>
+          <li><code>space-evenly</code>: objektai paskirstomi taip, kad tarpas tarp bet kurių dviejų objektų (ir atstumas iki kraštų) būtų vienodas.</li>
         </ul>
         <p>
-          Note that that browser support for these values is nuanced. For example, space-between never got support from some versions of Edge, and start/end/left/right aren’t in Chrome yet. MDN has detailed charts. The safest values are flex-start, flex-end, and center.
-
-There are also two additional keywords you can pair with these values: safe and unsafe. Using safe ensures that however you do this type of positioning, you can’t push an element such that it renders off-screen (e.g. off the top) in such a way the content can’t be scrolled too (called “data loss”).
+          Atminkite, kad ne kiekviena naršyklė palaiko šias reikšmes. Pvz., <code>space-between</code> „Edge“ naršyklė niekada negavo palaikymo, o <code>start / end / left / right</code> „Chrome“ dar nėra. MDN turi išsamias diagramas.
         </p>
       </div>
     </section>
 
-    <section id="align-content" class="navbar-anchor-fix">
+    <section id="align-items" class="navbar-anchor-fix">
       <div class="container container--narrow  container--with-sidebar-left mt-5">
         <h2 class="mb-2"><code class="h4">align-items</code></h2>
         <p>
-          This defines the default behavior for how flex items are laid out along the cross axis on the current line. Think of it as the justify-content version for the cross-axis (perpendicular to the main-axis).
+          Tai apibrėžia numatytąjį elgesį, kaip lankstūs elementai išdėstomi išilgai esamos linijos skersinės ašies. Įsivaizduokite tai kaip <code>justify-content</code> kryžminei ašiai.
         </p>
         <ul class="ul">
-          <li><code>stretch (default)</code>: stretch to fill the container (still respect min-width/max-width)</li>
-          <li><code>flex-start / start / self-start</code>: items are placed at the start of the cross axis. The difference between these is subtle, and is about respecting the flex-direction rules or the writing-mode rules.</li>
-          <li><code>flex-end / end / self-end</code>: items are placed at the end of the cross axis. The difference again is subtle and is about respecting flex-direction rules vs. writing-mode rules.</li>
-          <li><code>center</code>: items are centered in the cross-axis</li>
-          <li><code>baseline</code>: items are aligned such as their baselines align</li>
+          <li><code>stretch (default)</code>: ištempia objektus, kad jie užpildytų tėvinį flex konteinerį.</li>
+          <li><code>flex-start / start / self-start</code>: objektai dedami kryžminės ašies pradžioje. Skirtumas tarp jų yra subtilus ir susijęs su lanksčios krypties taisyklių arba rašymo režimo taisyklių laikymusi.</li>
+          <li><code>flex-end / end / self-end</code>: objektai dedami kryžminės ašies gale. Skirtumas vėlgi yra subtilus ir susijęs su <code>flex-direction</code> taisyklių ir rašymo režimo taisyklių laikymusi.</li>
+          <li><code>center</code>: objektai yra centre kryžminėje ašyje</li>
+          <li><code>baseline</code>: objektai sulygiuojami taip, kaip sulygiuoja jų bazinės linijos.</li>
         </ul>
-        <p>
-          The safe and unsafe modifier keywords can be used in conjunction with all the rest of these keywords (although note browser support), and deal with helping you prevent aligning elements such that the content becomes inaccessible.
-        </p>
       </div>
     </section>
-    <section id="git-init" class="navbar-anchor-fix">
+    <section id="align-content" class="navbar-anchor-fix">
       <div class="container container--narrow  container--with-sidebar-left mt-5">
         <h2 class="mb-2"><code class="h4">align-content</code></h2>
         <p>
-          This aligns a flex container’s lines within when there is extra space in the cross-axis, similar to how justify-content aligns individual items within the main-axis.
+          Sulygiuoja lankstaus konteinerio linijas, kai kryžminėje ašyje yra daugiau vietos, panašiai kaip <code>justify-content</code> išlygina atskirus elementus pagrindinėje ašyje.
         </p>
         <ul class="ul">
-          <li><code>normal (default)</code>: items are packed in their default position as if no value was set.</li>
-          <li><code>flex-start / start</code>: items packed to the start of the container. The (more supported) flex-start honors the flex-direction while start honors the writing-mode direction.</li>
-          <li><code>flex-end / end</code>: items packed to the end of the container. The (more support) flex-end honors the flex-direction while end honors the writing-mode direction.</li>
-          <li><code>center</code>: items centered in the container</li>
-          <li><code>space-between</code>: items evenly distributed; the first line is at the start of the container while the last one is at the end</li>
-          <li><code>space-around</code>: items evenly distributed with equal space around each line</li>
-          <li><code>space-evenly</code>: items are evenly distributed with equal space around them</li>
-          <li><code>stretch</code>: lines stretch to take up the remaining space</li>
+          <li><code>normal (default)</code>: objektai supakuoti į numatytąją padėtį, tarsi nebūtų nustatyta jokia vertė.</li>
+          <li><code>flex-start / start</code>: objektai supakuoti į konteinerio pradžią.</li>
+          <li><code>flex-end / end</code>: objektai supakuoti į konteinerio pabaigą.</li>
+          <li><code>center</code>: objektai išcentruoti konteinerio centre.</li>
+          <li><code>space-between</code>: objektai tolygiai išrykiuojami. Pimra eilutė pradžioje, o paskutinė - pabaigoje.</li>
+          <li><code>space-around</code>: objektai vienodai išrykiuojami su vienodais tarpais tarp eilučių.</li>
+          <li><code>space-evenly</code>: objektai vienodai išrykiuojami su vienodais tarpais tarp jų.
+           items are evenly distributed with equal space around them</li>
+          <li><code>stretch</code>: linijos išplečiamos užimti likusią laisvą vietą tarp eilučių.</li>
         </ul>
-        <p>
-          The safe and unsafe modifier keywords can be used in conjunction with all the rest of these keywords (although note browser support), and deal with helping you prevent aligning elements such that the content becomes inaccessible.
-        </p>
       </div>
     </section>
 
@@ -177,4 +172,4 @@ There are also two additional keywords you can pair with these values: safe and 
 
 </body>
 
-</html> 
+</html>
