@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grupinio projekto šablonas</title>
+  <title>HTML</title>
+
   <link rel="stylesheet" href="css/main.css">
+
   <script src="js/navbar.js" defer></script>
   <script src="js/sidebar.js" defer></script>
 </head>
@@ -45,9 +47,12 @@
     <nav>
       <ul>
         <li><a class="sidebar__link" href="#main">HTML</a></li>
-        <li><a class="sidebar__link" href="#html-elements">Pagrindiniai HTML elementai</a></li>
-        <!-- <li><a class="sidebar__link" href="#git-files-update">Failų atnaujinimas</a></li>
-        <li><a class="sidebar__link" href="#git-feature-flow">Naujo funkcionalumo kūrimas</a></li> -->
+        <li><a class="sidebar__link" href="#html-element-structure">HTML elemento struktūra</a></li>
+        <li><a class="sidebar__link" href="#html-element-types">HTML elementų tipai</a></li>
+        <li><a class="sidebar__link" href="#inline-elements">Inline elementai</a></li>
+        <li><a class="sidebar__link" href="#inline-block-elements">Inline-block elementai</a></li>
+        <li><a class="sidebar__link" href="#block-elements">Block elementai</a></li>
+        <li><a class="sidebar__link" href="#images">Nuotraukos</a></li>
       </ul>
     </nav>
   </aside>
@@ -65,19 +70,200 @@
     </div>
   </main>
 
-  <section id="html-elements" class="navbar-anchor-fix">
+  <section id="html-element-structure" class="navbar-anchor-fix">
     <div class="container container--narrow  container--with-sidebar-left mt-5">
-      <h2 class="mb-3"><code class="h4">Pagrindiniai HTML elementai</code></h2>
+      <h2 class="mb-3"><code class="h4">HTML elemento struktūra</code></h2>
+      <img src="images/html-element-structure.png" class="w-100">
+    </div>
+  </section>
+
+  <section id="html-element-types" class="navbar-anchor-fix">
+    <div class="container container--narrow  container--with-sidebar-left mt-5">
+      <h2 class="mb-3"><code class="h4">HTML elementų tipai</code></h2>
+      <p>
+        HTML lementų tipai yra aprašomi naudojant CSS savybę <code>display</code>. Ši CSS savybė apibūdina kaip bus
+        atvaizduojamas/išdėstomas HTML elementas.
+        Elementų tipai yra skirstomi į:
+      </p>
       <ul class="ul">
-        <li><code>h1</code>: antraštė</li>
-        <li><code>p</code>: paragrafas</li>
+        <li><code>inline</code> - baigtinis tekstinis elementas.</li>
+        <li><code>inline-block</code> - eilutės elementas, kuriam gali būt nustatomi aukščio ir pločio nustatymai, bei
+          paraštės.</li>
+        <li><code>block</code> - elementai per visą tėvinio elemento plotį.</li>
       </ul>
     </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer bg-dark text-center text-light py-3 mt-5">
-      <span>All rights reserved CodeAcademy © 2021</span>
-    </footer>
+  <section id="inline-elements" class="navbar-anchor-fix">
+    <div class="container container--narrow  container--with-sidebar-left mt-5">
+      <h2 class="mb-3"><code class="h4">Dažniausiai naudojami inline elementai</code></h2>
+      <p>
+        Dažniausiai naudojamus <code>inline</code> elementus sudaro:
+      </p>
+      <ul class="ul">
+        <li><code>span</code> - bendrinis teksto elementas.</li>
+        <li><code>strong</code> - paryškinto teksto elementas.</li>
+        <li><code>em</code> - pasviręs teksto elementas.</li>
+        <li><code>a</code> - nuoroda.</li>
+        <li><code>img</code> - nuotrauka.</li>
+      </ul>
+      <article>
+        <h3 class="mt-3">inline elementų pavyzdžiai</h3>
+        <ul class="ul">
+          <li><span>Paprastas tekstas, naudojama struktūrizuojant turinį</span></li>
+          <li><strong>Paryškintas tekstas</strong></li>
+          <li><em>Pasviręs tekstas</em></li>
+          <li><em><strong>Paryškintas ir pasviręs tekstas</strong></em></li>
+          <li><img src="https://unsplash.it/24/20"></li>
+          <li><img src="https://unsplash.it/60/30"></li>
+          <li><a href="https://google.lt">Nuoroda tame pačiame skirtuke</a></li>
+          <li><a href="https://google.lt" target="blank">Nuoroda naujame skirtuke</a></li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="inline-block-elements" class="navbar-anchor-fix">
+    <div class="container container--narrow  container--with-sidebar-left mt-5">
+      <h2 class="mb-3"><code class="h4">Dažniausiai naudojami inline-block elementai</code></h2>
+      <p>
+        Dažniausiai naudojamus <code>inline-block</code> elementus sudaro:
+      </p>
+      <ul class="ul">
+        <li><code>span</code> - bendrinis teksto elementas.</li>
+        <li><code>strong</code> - paryškinto teksto elementas.</li>
+        <li><code>em</code> - pasviręs teksto elementas.</li>
+        <li><code>a</code> - nuoroda.</li>
+        <li><code>img</code> - nuotrauka.</li>
+      </ul>
+      <article>
+        <h3 class="mt-3">inline-block elementų pavyzdžiai</h3>
+        <ul class="ul">
+          <li>
+            <strong>input</strong> - vartotojo įvesties elementas
+            <ul>
+              <li>
+                <strong>type="text"</strong>:
+                <input type="text" value="pavyzdinis tekstas">
+              </li>
+              <li>
+                <strong>type="password"</strong>:
+                <input type="password" value="pavyzdinis tekstas">
+              </li>
+              <li>
+                <strong>type="email"</strong>:
+                <input type="email" value="pavyzdinis tekstas">
+              </li>
+              <li>
+                <strong>type="number"</strong>:
+                <input type="number" value="123">
+              </li>
+              <li>
+                <strong>type="date"</strong>:
+                <input type="date">
+              </li>
+              <li>
+                <strong>type="range"</strong>:
+                <input type="range" min="0" max="10" value="4">
+              </li>
+              <li>
+                <strong>type="color"</strong>:
+                <input type="color" value="#ffffff">
+              </li>
+              <li>
+                <strong>type="checkbox"</strong>:
+                <input type="checkbox">
+              </li>
+              <li>
+                <strong>type="radio"</strong>:
+                <input type="radio">
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>text-area</strong>:
+            <textarea cols="30" rows="10" style="vertical-align: top">Tekstas 3000</textarea>
+          </li>
+          <li>
+            <strong>select</strong>:
+            <select>
+              <option>Vilnius</option>
+              <option>Kaunas</option>
+              <option>Klaipėda</option>
+            </select>
+          </li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="block-elements" class="navbar-anchor-fix">
+    <div class="container container--narrow  container--with-sidebar-left mt-5">
+      <h2 class="mb-3"><code class="h4">Dažniausiai naudojami block elementai</code></h2>
+      <p>
+        Dažniausiai naudojamus <code>block</code> elementus sudaro:
+      </p>
+      <ul class="ul">
+        <li><code>div</code> - bendrinis blokinis elementas.</li>
+        <li><code>header</code> - viršutinis komponento elementas.</li>
+        <li><code>footer</code> - apatinis komponento elementas.</li>
+        <li><code>section</code> - pagrindinė puslapio sekcija.</li>
+        <li><code>article</code> - potemės blokinis elementas.</li>
+        <li><code>aside</code> - šoninis blokinis elementas.</li>
+        <li><code>p</code> - pastraipos blokinis elementas.</li>
+        <li><code>h1-h6</code> - antraščių blokiniai elementai.</li>
+        <li><code>form</code> - vartotojo įvesčių gaubiamasis elementas.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="images" class="navbar-anchor-fix">
+    <div class="container container--narrow  container--with-sidebar-left mt-5">
+      <h2 class="mb-3"><code class="h4">Nuotraukos</code></h2>
+      <p>
+        Nuotraukos yra <code>inline</code> elementai. Visgi galima nustatyti nuotraukos plotį ir aukšti naudojant
+        atributus. Nustačius vieną dimensiją(plotį arba aukštį) kita prisiderina pagal orginalios nuotrukos proporcijas.
+        Jeigu nustatome 2 dimensijas, tuomet nuotrauka yra ištempiama (arba sutraukiama). Nuotraukos <code>src</code>
+        atribute turime nurodyti kelią iki nuotraukos. Nuotraukos <code>alt</code> atrbiute, turime nurodyti tekstą,
+        kuris bus rodomas tik tuo atveju, jei <code>src</code> atribute nurodytu keliu nuotrauka nėra
+        randama/pasiekiama.
+      </p>
+      <article>
+        <h3 class="mt-3">Nuotraukų pavyzdžiai</h3>
+        <ul class="ul">
+          <li>
+            <p class="mb-3">Nuotrauka su keliu į išorinę nuorodą</p>
+            <img src="https://unsplash.it/200/150" />
+          </li>
+          <li>
+            <p class="mb-3">Nuotrauka su keliu į failų sistemą</p>
+            <img src="images/200x200.png" />
+          </li>
+          <li>
+            <p class="mb-3">Nuotrauka su blogu keliu ir alt atributas</p>
+            <img src="images/tokios nera.jpg" alt="alt atributo reikšmė" />
+          </li>
+          <li>
+            <p class="mb-3">Nuotraukos su vienos dimensijos nustatymu</p>
+            <img src="https://unsplash.it/150/300" height="100" />
+            <img src="https://unsplash.it/200/200" height="100" />
+            <img src="https://unsplash.it/300/150" height="100" />
+          </li>
+          <li>
+            <p class="mb-3">Nuotraukos su dviejų dimensijų nustatymais</p>
+            <img src="https://unsplash.it/1500/300" height="100" width="100" />
+            <img src="https://unsplash.it/200/200" height="100" width="100" />
+            <img src="https://unsplash.it/300/1500" height="100" width="100" />
+          </li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark text-center text-light py-3 mt-5">
+    <span>All rights reserved CodeAcademy © 2021</span>
+  </footer>
 
 </body>
 
