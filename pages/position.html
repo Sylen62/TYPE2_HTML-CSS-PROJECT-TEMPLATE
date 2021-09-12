@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Poition</title>
 
   <link rel="stylesheet" href="../css/main.css">
   <script src="../js/navbar.js" defer></script>
@@ -45,10 +45,13 @@
   <aside class="sidebar">
     <nav>
       <ul>
-        <li><a class="sidebar__link" href="#main">Pagrindinis</a></li>
-        <li><a class="sidebar__link" href="#git-init">Pasirengimas darbui</a></li>
-        <li><a class="sidebar__link" href="#git-files-update">Failų atnaujinimas</a></li>
-        <li><a class="sidebar__link" href="#git-feature-flow">Naujo funkcionalumo kūrimas</a></li>
+        <li><a class="sidebar__link" href="#main">Position</a></li>
+        <li><a class="sidebar__link" href="#position-types">Pagrindiniai position tipai</a></li>
+        <li><a class="sidebar__link" href="#position-static">Static</a></li>
+        <li><a class="sidebar__link" href="#position-relative">Relative</a></li>
+        <li><a class="sidebar__link" href="#position-absolute">Absolute</a></li>
+        <li><a class="sidebar__link" href="#position-fixed">Fixed</a></li>
+        <li><a class="sidebar__link" href="#position-sticky">Sticky</a></li>
       </ul>
     </nav>
   </aside>
@@ -61,13 +64,6 @@
         <code>Position</code>, tai HTML elemento pozicionavimas kitų elementų atžvilgiu. Standartinis pozicionavimas
         vadinamas <code>static</code>.
       </p>
-      <!-- <p class="mt-2">
-        <code>Static</code> pozicionavimas veikia rašymo tvarkos principu: iš kairės į dešinę, o jeigu elementai
-        netelpa
-        į tėvinio elemento plotį, tuomet persikelia į sekančią eilutę. Yra dar keli pozicionavimo tipai, kurie
-        bus
-        aprašyti šios sekcijos potemėse.
-      </p> -->
     </div>
 
     <section id="position-types" class=" navbar-anchor-fix">
@@ -107,7 +103,7 @@
           <li><code>left</code></li>
         </ul>
         <article>
-          <h3 class="mb-3"><code class="h5">Position relative pavizdys</code></h3>
+          <h3 class="mb-3 mt-3"><code class="h5">Position relative pavizdys</code></h3>
           <div class="position-example-container">
             <div class="square">1</div>
             <div class="square">2</div>
@@ -142,16 +138,142 @@
       </div>
     </section>
 
+    <section id="position-absolute" class=" navbar-anchor-fix">
+      <div class="container container--narrow  container--with-sidebar-left mt-5">
+        <h2 class="mb-3"><code class="h4">Absolute</code></h2>
+        <p>
+          <code>Absolute</code> - pozicionavimo tipas, kuomet yra ieškomas pirmas tėvinės hierarchijos elementas, kurio
+          position <code>nėra</code> static. Radus tokį elementą, atsispiriama nuo jo kontūrų naudojant savybes
+          <code>top, right, bottom, left</code>. Jeigu tėvinės hierarchijos šakoje nėra randamas elementas su <code>ne
+            static</code> position tipu, elementas atsispirs nuo vieport kontūrų, matomų puslapio viršuje. Nustačius
+          <code>position: absolute</code>, kiti elementai jo nebemato ir yra išdėstomi, tarsi jo nebūtų.
+        </p>
+        <article>
+          <h3 class="mb-3 mt-3"><code class="h5">Position absolute pavyzdys</code></h3>
+          <div class="position-example-container pos-relative">
+            <div class="square">1</div>
+            <div class="square">2</div>
+            <div class="square">3</div>
+            <div class="square">4</div>
+            <div class="square">5</div>
+            <div class="square">6</div>
+            <div class="square square--absolute">7</div>
+            <div class="square">8</div>
+            <div class="square">9</div>
+            <div class="square">10</div>
+            <div class="square">11</div>
+            <div class="square">12</div>
+            <div class="square">13</div>
+            <div class="square">14</div>
+            <div class="square">15</div>
+            <div class="square">16</div>
+            <div class="square">17</div>
+            <div class="square">18</div>
+            <div class="square">19</div>
+            <div class="square">20</div>
+            <div class="square">21</div>
+            <div class="square">22</div>
+            <div class="square">23</div>
+            <div class="square">24</div>
+            <div class="square">25</div>
+            <div class="square">26</div>
+            <div class="square">27</div>
+            <div class="square">28</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="position-fixed" class=" navbar-anchor-fix">
+      <div class="container container--narrow  container--with-sidebar-left mt-5">
+        <h2 class="mb-3"><code class="h4">Fixed</code></h2>
+        <p>
+          <code>position: fixed</code> elementai visada išlieka toje pačioje viewport vietoje. Atsispyrimui nuo vieport
+          naudojame savybes <code>top, right, bottom ir left</code>.
+        </p>
+        <p>
+          Šio puslapio navigacinė juosta (navbar) pririšama prie matomo lango (viewport) naudojant <code>position:
+            fixed;</code>
+        </p>
+      </div>
+    </section>
+
+    <section id="position-sticky" class=" navbar-anchor-fix">
+      <div class="container container--narrow  container--with-sidebar-left mt-5">
+        <h2 class="mb-3"><code class="h4">Sticky</code></h2>
+        <p>
+          <code>Sticky</code> - pozicionavimo tipas, kuomet ieškomas elementas tėvinėje hierarchijoje, kuriame yra
+          įgalintas scroll'inimas. Tuomet nuo to elemento kontūrų, yra atsispiriama naudojant CSS savybes <code>top,
+            right, bottom, left</code>.
+        </p>
+        <article>
+          <h3 class="mb-3 mt-3"><code class="h5">Position sticky pavyzdys</code></h3>
+          <div class="
+                position-example-container
+                position-example-container--scrollable
+              ">
+            <div class="square">1</div>
+            <div class="square">2</div>
+            <div class="square">3</div>
+            <div class="square">4</div>
+            <div class="square">5</div>
+            <div class="square">6</div>
+            <div class="square square--sticky-top">7</div>
+            <div class="square">8</div>
+            <div class="square">9</div>
+            <div class="square">10</div>
+            <div class="square square--sticky-top">11</div>
+            <div class="square">12</div>
+            <div class="square">13</div>
+            <div class="square">14</div>
+            <div class="square">15</div>
+            <div class="square square--sticky-top">16</div>
+            <div class="square">17</div>
+            <div class="square">18</div>
+            <div class="square">19</div>
+            <div class="square">20</div>
+            <div class="square">21</div>
+            <div class="square">22</div>
+            <div class="square">23</div>
+            <div class="square">24</div>
+            <div class="square">25</div>
+            <div class="square square--sticky-bottom">26</div>
+            <div class="square">27</div>
+            <div class="square">28</div>
+            <div class="square">29</div>
+            <div class="square">30</div>
+            <div class="square">31</div>
+            <div class="square">32</div>
+            <div class="square">33</div>
+            <div class="square">34</div>
+            <div class="square">35</div>
+            <div class="square">36</div>
+            <div class="square">37</div>
+            <div class="square">38</div>
+            <div class="square">39</div>
+            <div class="square">40</div>
+            <div class="square">41</div>
+            <div class="square">42</div>
+            <div class="square">43</div>
+            <div class="square">44</div>
+            <div class="square">45</div>
+            <div class="square">46</div>
+            <div class="square">47</div>
+            <div class="square">48</div>
+            <div class="square">49</div>
+            <div class="square">50</div>
+            <div class="square">51</div>
+            <div class="square">52</div>
+            <div class="square">53</div>
+            <div class="square">54</div>
+            <div class="square">55</div>
+            <div class="square">56</div>
+          </div>
+        </article>
+      </div>
+    </section>
 
   </main>
-
-  <!-- 
-    static
-    * * * relative
-    * * * absolute
-    * * * fixed
-    * * * sticky
-   -->
 
   <!-- Footer -->
   <footer class="footer bg-dark text-center text-light py-3 mt-5">
