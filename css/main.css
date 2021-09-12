@@ -16,8 +16,9 @@
 @import "components/code.css";
 @import "components/lists.css";
 @import "components/footer.css";
-@import "components/position.css";
 @import "components/buttons.css";
+
+@import "pages/position.css";
 
 /* @import "sections/grid-task-1-section.css";
 @import "sections/grid-named-lines-section.css"; */
