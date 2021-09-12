@@ -16,10 +16,11 @@
 @import "components/code.css";
 @import "components/lists.css";
 @import "components/footer.css";
-@import "components/position.css";
 @import "components/buttons.css";
+
+@import "pages/position.css";
 
 @import "pages/grid-page.css";
 @import "pages/grid-task-1.css";
-@import"pages/grid-task-2.css";
+@import "pages/grid-task-2.css";
 @import "pages/grid-task-3.css";
