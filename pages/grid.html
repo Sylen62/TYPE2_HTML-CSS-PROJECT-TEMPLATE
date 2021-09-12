@@ -75,6 +75,7 @@
         galima pirmo lygio vaikams nurodyti kokią "tinklelio" dalį/plotą jis
         užims.
       </p>
+      <a href="https://cssgridgarden.com/" class="button">Interaktyvus grid žaidimas</a>
     </div>
 
     <section id="grid-template-columns" class="navbar-anchor-fix">
@@ -87,10 +88,7 @@
           ... {
               display: grid;
               grid-template-columns: 100px 200px 100px 50px;<span class="code__comment">
-              pirmojo stulpelio plotis ↗     ↗    ↗     ↗
-                  antrojo stulpelio plotis ↗    ↗     ↗
-                    trečiojo stulpelio plotis ↗     ↗
-                      ketvirtojo stulpelio plotis ↗</span>
+              atitinkamai: pirmo/ antro/ trečio/ ketvirto stulpelio pločiai</span>
           }</pre>
       </div>
     </section>
@@ -104,9 +102,7 @@
   ... {
       display: grid;
       grid-template-rows: 100px 50px 100px;<span class="code__comment">
- pirmosios eilutės aukštis ↗     ↗    ↗
-     antrosios eilutės aukštis ↗    ↗
-       trečiosios eilutės aukštis ↗ 
+        atitinkamai: pirmos/ antros/ trečios eilutės aukščiai 
   }</span></pre>
       </div>
     </section>
@@ -146,32 +142,34 @@
     <section id="grid-row" class="navbar-anchor-fix">
       <div class="container container--narrow  container--with-sidebar-left mt-5">
         <h2 class="mb-3"><code class="h4">grid-row</code></h2>
-    <p>
-      Ši savybė aprašo kiek ir kokių eilučių užims "grid" vaikinis elementas. Principai veikia taip pat kaip ir
-      savybėje <strong><a href="#grid-column">grid-column</a></strong>
-    </p>
-  </div>
-</section>
+        <p>
+          Ši savybė aprašo kiek ir kokių eilučių užims "grid" vaikinis elementas. Principai veikia taip pat kaip ir
+          savybėje <strong><a href="#grid-column">grid-column</a></strong>
+        </p>
+      </div>
+    </section>
 
-<section id="grid-plotai" class="navbar-anchor-fix">
-  <div class="container container--narrow  container--with-sidebar-left mt-5">
-    <h2 class="mb-3"><code class="h4">grid-plotai</code></h2>
-      <p>
-        Sudarius tinklelį naudojant stulpelius ir eilutes yra automatiškai sukuriamos linijos. <br>
-        <strong>grid-area</strong> tai keturiomis linijomis apibrėžtas vaikinio elemento plotas - viršutinė, kairė,
-        apatinė ir dešinė linijos. Jis visuomet turi būti stačiakampio formos. <br>
-        Grid pirmo lygio vaikų plotą taip pat galime apibrėžti žodiniu pavidalu, kuomet tėviniame elemente esame aprašę
-        plotų šabloną.
-      </p>
-</div> </section>
-<section id="grid-area" class="navbar-anchor-fix">
-  <div class="container container--narrow  container--with-sidebar-left mt-5">
-    <h2 class="mb-3"><code class="h2">grid-area</code></h2>
-    <p>
-      Ši savybė taikoma vaikiniam "grid" elementui. Plotas gali būt aprašomas linijomis, arba pagal ploto
-      pavadinimą (<em>ploto pavadinimas turi būti aprašytas tėvinio "grid" šablone.</em>).
-    </p>
-    <pre class="code">
+    <section id="grid-plotai" class="navbar-anchor-fix">
+      <div class="container container--narrow  container--with-sidebar-left mt-5">
+        <h2 class="mb-3"><code class="h4">grid-plotai</code></h2>
+        <p>
+          Sudarius tinklelį naudojant stulpelius ir eilutes yra automatiškai sukuriamos linijos. <br>
+          <strong>grid-area</strong> tai keturiomis linijomis apibrėžtas vaikinio elemento plotas - viršutinė, kairė,
+          apatinė ir dešinė linijos. Jis visuomet turi būti stačiakampio formos. <br>
+          Grid pirmo lygio vaikų plotą taip pat galime apibrėžti žodiniu pavidalu, kuomet tėviniame elemente esame
+          aprašę
+          plotų šabloną.
+        </p>
+      </div>
+    </section>
+    <section id="grid-area" class="navbar-anchor-fix">
+      <div class="container container--narrow  container--with-sidebar-left mt-5">
+        <h2 class="mb-3"><code class="h2">grid-area</code></h2>
+        <p>
+          Ši savybė taikoma vaikiniam "grid" elementui. Plotas gali būt aprašomas linijomis, arba pagal ploto
+          pavadinimą (<em>ploto pavadinimas turi būti aprašytas tėvinio "grid" šablone.</em>).
+        </p>
+        <pre class="code">
                   .child-1 {
                     grid-area: 2 / 4 / 4 / 6;
     <span class="code__comment">viršutinė eilutės linija  ↗   ↗  ↗  ↗</span>
@@ -190,23 +188,24 @@
                     grid-area: sidebar;
                   }
     </pre>
-</div> </section>
-<section id="grid-template-areas" class="navbar-anchor-fix">
-  <div class="container container--narrow  container--with-sidebar-left mt-5">
-    <h2 class="mb-3"><code class="h4">grid-template-areas</code></h2>
+      </div>
+    </section>
+    <section id="grid-template-areas" class="navbar-anchor-fix">
+      <div class="container container--narrow  container--with-sidebar-left mt-5">
+        <h2 class="mb-3"><code class="h4">grid-template-areas</code></h2>
 
-<p>
-  Ši savybė taikomai "grid" tėviniam elementui. Ši savybė sudaroma aprašant plotų šablonus mums patogiais
-  raktažodžiais. <br>
-  Sudarant plotų šabloną, svarbu įvardinti plotus taip, jog jie būtų stačiakampiai, priešingu atveju, šablonas
-  neveiks. <br>
-  Kiekvienos eilutės šablonas turi būti tarp dvigubų kabučių, pvz.: <strong>"raktažodis raktažodis1"</strong>.
-  Jungiant eilutes galime sudaryti visą 2D plotų šabloną. Raktažodžiai, gali kartotis skirtingose eilutėse.
-  <br>
-  Stulpelių kiekis, kiekvienoje eilutėje privalo būti vienodas!
-</p>
+        <p>
+          Ši savybė taikomai "grid" tėviniam elementui. Ši savybė sudaroma aprašant plotų šablonus mums patogiais
+          raktažodžiais. <br>
+          Sudarant plotų šabloną, svarbu įvardinti plotus taip, jog jie būtų stačiakampiai, priešingu atveju, šablonas
+          neveiks. <br>
+          Kiekvienos eilutės šablonas turi būti tarp dvigubų kabučių, pvz.: <strong>"raktažodis raktažodis1"</strong>.
+          Jungiant eilutes galime sudaryti visą 2D plotų šabloną. Raktažodžiai, gali kartotis skirtingose eilutėse.
+          <br>
+          Stulpelių kiekis, kiekvienoje eilutėje privalo būti vienodas!
+        </p>
 
-<pre class="code">
+        <pre class="code">
 .grid-mobile {
   display: grid;
   grid-template-columns: 1fr; <span class="code__comment">// Aprašome vieną stulpelį</span>
@@ -243,16 +242,16 @@
     "footer footer  footer  footer" <span class="code__comment">// ketvirtos eilutės šablonas</span>
 }
 </pre>
-</div>
-</section>
-<section id="grid-template" class="navbar-anchor-fix">
-  <div class="container container--narrow  container--with-sidebar-left mt-5">
-    <h2 class="mb-3"><code class="h4">grid-template</code></h2>
-    <p>
-      Tai savybių <strong>grid-template-columns</strong>, <strong>grid-template-rows</strong> ir
-      <strong>grid-template-areas</strong> apjungimas.
-    </p>
-    <pre class="code">
+      </div>
+    </section>
+    <section id="grid-template" class="navbar-anchor-fix">
+      <div class="container container--narrow  container--with-sidebar-left mt-5">
+        <h2 class="mb-3"><code class="h4">grid-template</code></h2>
+        <p>
+          Tai savybių <strong>grid-template-columns</strong>, <strong>grid-template-rows</strong> ir
+          <strong>grid-template-areas</strong> apjungimas.
+        </p>
+        <pre class="code">
     .grid-desktop {
       display: grid;
       grid-template:
@@ -263,22 +262,28 @@
          250px  600px   400px   auto
     }
     </pre>
-  </div>
-</section>
+      </div>
+    </section>
 
-<section id="grid-named-lines" class="navbar-anchor-fix">
-  <div class="container container--narrow  container--with-sidebar-left mt-5">
-    <h2 class="mb-3"><code class="h4">Įvardintos linijos</code></h2>
-          <p>
-            Kartais sudarant tinklelio plotų šablonus (angl.: <em>grid-template-areas</em>) norima sudaryti
-            persiklojančius plotus. Tokiais atvejais, nėra įgalintos galimybės sukurti ploto šablono, kuriame tą pačią
-            vietą užimtų skirtingi plotai/sekcijos. Šiai problemai spręsti yra naudojama įvardintų tinklelio linijų
-            metodologija. <br><br>
-            Bet kuriai tinklelio linijai galima suteikti papildomus pavadinimus. Tuomet vaikiniam elementam yra aprašomas plotas pagal linijų apibrėžtumą: iš viršaus, kairės, apačios ir dešinės. Įvardinant plotus tokiu būdu, galime įgalinti sekcijų persiklojimą. <br><br>
-            Apibrėžus tinklelio vaikinius elementus įvardintomis linijomis, galime keisti jų išdėstymus aprašant eilučių ir stulpelių šablonus tėviniam elementus ir pervadinant kitas linijas, tokiais pat pavadinimais, kokiomis yra apibrėžti vaikiniai elementai.
-          </p>
-          <img src="file:///C:/Users/Viktorija/Documents/CodeAcademy/TYPE2/HMTL%20CSS/lesson%207%20-%20grid%20areas,%20named%20lines%20and%20order/teorija/grid-named-lines.png" class="w-100">
-          <pre class="code">
+    <section id="grid-named-lines" class="navbar-anchor-fix">
+      <div class="container container--narrow  container--with-sidebar-left mt-5">
+        <h2 class="mb-3"><code class="h4">Įvardintos linijos</code></h2>
+        <p>
+          Kartais sudarant tinklelio plotų šablonus (angl.: <em>grid-template-areas</em>) norima sudaryti
+          persiklojančius plotus. Tokiais atvejais, nėra įgalintos galimybės sukurti ploto šablono, kuriame tą pačią
+          vietą užimtų skirtingi plotai/sekcijos. Šiai problemai spręsti yra naudojama įvardintų tinklelio linijų
+          metodologija. <br><br>
+          Bet kuriai tinklelio linijai galima suteikti papildomus pavadinimus. Tuomet vaikiniam elementam yra aprašomas
+          plotas pagal linijų apibrėžtumą: iš viršaus, kairės, apačios ir dešinės. Įvardinant plotus tokiu būdu, galime
+          įgalinti sekcijų persiklojimą. <br><br>
+          Apibrėžus tinklelio vaikinius elementus įvardintomis linijomis, galime keisti jų išdėstymus aprašant eilučių
+          ir stulpelių šablonus tėviniam elementus ir pervadinant kitas linijas, tokiais pat pavadinimais, kokiomis yra
+          apibrėžti vaikiniai elementai.
+        </p>
+        <img
+          src="file:///C:/Users/Viktorija/Documents/CodeAcademy/TYPE2/HMTL%20CSS/lesson%207%20-%20grid%20areas,%20named%20lines%20and%20order/teorija/grid-named-lines.png"
+          class="w-100">
+        <pre class="code">
 .grid {
   display: grid;
   <span class="code__comment">Stulpelių šablonas</span>
@@ -342,9 +347,51 @@
 .grid__card-img--3 { grid-area: card-3-img-start / card-3-img-start / card-3-img-end / card-3-img-end; }
 .grid__card-img--4 { grid-area: card-4-img-start / card-4-img-start / card-4-img-end / card-4-img-end; }
           </pre>
+      </div>
+    </section>
+
+    <section id="grid-tasks" class="navbar-anchor-fix">
+      <div class="container container--narrow  container--with-sidebar-left mt-5">
+        <h2 class="mb-3"><code class="h4">Grid užduotys</code></h2>
+        <div class="mt-5">
+          <div class="task-1">
+            <div class="task-1__header">.task-1__header</div>
+            <div class="task-1__main">.task-1__main</div>
+            <div class="task-1__widget">.task-1__widget</div>
+            <div class="task-1__footer">.task-1__footer</div>
+          </div>
+    </section>
+    <section id="task2" class="navbar-anchor-fix">
+      <div class="container container--narrow  container--with-sidebar-left mt-5">
+        <div class="task-2">
+          <div class="task-2__header">header</div>
+          <div class="task-2__menu">menu</div>
+          <div class="task-2__hero">hero</div>
+          <div class="task-2__main">main</div>
+          <div class="task-2__banner">banner</div>
+          <div class="task-2__extra">extra</div>
+          <div class="task-2__image">image</div>
+        </div>
+      </div>
+      <section id="task3" class="navbar-anchor-fix">
+        <div class="container container--narrow  container--with-sidebar-left mt-5">
+          <div class="task-3">
+            <div class="task-3__a">a</div>
+            <div class="task-3__b">b</div>
+            <div class="task-3__d">d</div>
+            <div class="task-3__c">c</div>
+            <div class="task-3__e">e</div>
+            <div class="task-3__f">f</div>
+          </div>
         </div>
       </section>
-</main>
+
+
+    </section>
+    </div>
+    </section>
+  </main>
+
 
 
   <!-- Footer -->
