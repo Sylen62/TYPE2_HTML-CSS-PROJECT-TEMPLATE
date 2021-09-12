@@ -1,0 +1,19 @@
+
+.button { 
+    display: inline-block;
+    padding: 10px 30px;
+    color: var(--white);
+    background: var(--black);
+    letter-spacing: .1rem;
+    margin-top: 1.5rem;
+    border-radius: 5px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease-in-out;
+    z-index: var(--z-index-sidebar-toggler);
+  
+}
+
+.button:hover {
+    color: var(--white);
+    background: var(--primary);
+}

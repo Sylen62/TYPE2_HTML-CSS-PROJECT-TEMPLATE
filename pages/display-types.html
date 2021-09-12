@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Display types</title>
   <link rel="stylesheet" href="../css/main.css">
   <script src="../js/navbar.js" defer></script>
   <script src="../js/sidebar.js" defer></script>
@@ -44,10 +44,10 @@
   <aside class="sidebar">
     <nav>
       <ul>
-        <li><a class="sidebar__link" href="#main">Pagrindinis</a></li>
-        <li><a class="sidebar__link" href="#git-init">Pasirengimas darbui</a></li>
-        <li><a class="sidebar__link" href="#git-files-update">Failų atnaujinimas</a></li>
-        <li><a class="sidebar__link" href="#git-feature-flow">Naujo funkcionalumo kūrimas</a></li>
+        <li><a class="sidebar__link" href="#main">Display</a></li>
+        <li><a class="sidebar__link" href="#inline">Inline</a></li>
+        <li><a class="sidebar__link" href="#inline-block">Inline-block</a></li>
+        <li><a class="sidebar__link" href="#block">Block</a></li>
       </ul>
     </nav>
   </aside>
@@ -55,27 +55,122 @@
   <!-- Content -->
   <main id="main" class="pt-navbar-height">
     <div class="container container--narrow  container--with-sidebar-left mt-4">
-      <h1 class="mb-3">Main</h1>
+      <h1 class="mb-3">Display elementų tipai</h1>
       <p>
-        asd
-      </p>
+        CSS savybė <code>display</code> apibūdina, kaip bus
+        atvaizduojamas -
+        išdėstomas HTML elementas.
+      </p>      
+      <ul>
+        <li>
+        </li>
+        <li>
+        </li>
+      </ul>
     </div>
 
-    <section id="git-init" class="navbar-anchor-fix">
+    <section id="inline" class="navbar-anchor-fix">
       <div class="container container--narrow  container--with-sidebar-left mt-5">
-        <h2 class="mb-2">Section 1</h2>
+        <h2 class="mb-2"><code class="h4">inline</code> elementai</h2>
         <p>
-          asd
+          <code>inline</code> - baigtinis tekstinis elementas.
         </p>
+        <ul class="ul">
+          <li><code>span</code> - bendrinis teksto elementas</li>
+          <li><code>code</code> - paryškintas tekto elementas</li>
+          <li><code>em</code> - pasviręs teksto elementas</li>
+          <li><code>a</code> - nuoroda</li>
+          <li><code>img</code> - nuotrauka</li>
+        </ul>
       </div>
     </section>
 
-    <section id="git-init" class="navbar-anchor-fix">
+    <section id="inline-block" class="navbar-anchor-fix">
       <div class="container container--narrow  container--with-sidebar-left mt-5">
-        <h2 class="mb-2">Section 3</h2>
+        <h2 class="mb-2"><code class="h4">inline-block</code> elementai</h2>
         <p>
-          asd
+          <code>inline-block</code> - eilutės elementas, kuriam gali
+          būt
+          nustatomi aukščio ir pločio nustatymai, bei paraštės.
         </p>
+        
+      <ul class="ul">
+        <li>
+          <code>input</code> - vartotojo įvesties elementas
+          <ul class="ul">
+            <li>
+              <code>type="text"</code>:
+              <input type="text" value="pavyzdinis tekstas">
+            </li>
+            <li>
+              <code>type="password"</code>:
+              <input type="password" value="pavyzdinis tekstas">
+            </li>
+            <li>
+              <code>type="email"</code>:
+              <input type="email" value="pavyzdinis tekstas">
+            </li>
+            <li>
+              <code>type="number"</code>:
+              <input type="number" value="123">
+            </li>
+            <li>
+              <code>type="date"</code>:
+              <input type="date">
+            </li>
+            <li>
+              <code>type="range"</code>:
+              <input type="range" min="0" max="10" value="4">
+            </li>
+            <li>
+              <code>type="color"</code>:
+              <input type="color" value="#ffffff">
+            </li>
+            <li>
+              <code>type="checkbox"</code>:
+              <input type="checkbox">
+            </li>
+            <li>
+              <code>type="radio"</code>:
+              <input type="radio">
+            </li>
+          </ul>
+        </li>
+        <li>
+          <code>text-area</code>:
+          <textarea cols="30" rows="10"
+            style="vertical-align: top">Tekstas 3000</textarea>
+        </li>
+        <li>
+          <code>select</code>:
+          <select>
+            <option>Vilnius</option>
+            <option>Kaunas</option>
+            <option>Klaipėda</option>
+          </select>
+        </li>
+      </ul>
+      </div>
+    </section>
+
+    <section id="block" class="navbar-anchor-fix">
+      <div class="container container--narrow  container--with-sidebar-left mt-5">
+        <h2 class="mb-2"><code class="h4">block</code> elementai</h2>
+        <p>
+          <code>block</code> - elementai per visą tėvinio elemento
+          plotį.
+        </p>
+        <ul class="ul">
+          <li><code>div</code> - bendrinis blokinis elementas</li>
+          <li><code>header</code> - viršutinis komponento elementas</li>
+          <li><code>footer</code> - apatinis komponento elementas</li>
+          <li><code>section</code> - pagrindinė puslapio sekcija</li>
+          <li><code>article</code> - potemės blokinis elementas</li>
+          <li><code>aside</code> - šoninis blokinis elementas</li>
+          <li><code>p</code> - pastraipos blokinis elementas</li>
+          <li><code>h1-h6</code> - antraščių blokiniai elementai</li>
+          <li><code>form</code> - vartotojo įvesčių gaubiamasis elementas</li>
+        </ul>
       </div>
     </section>
 
